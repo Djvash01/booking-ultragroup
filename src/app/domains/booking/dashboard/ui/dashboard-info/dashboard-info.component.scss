@@ -1,0 +1,16 @@
+@import 'colors/colors';
+
+.text {
+  &__title {
+    color: $color-label;
+    text-align: left;
+    margin: 0;
+  }
+}
+
+.actions {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+
+}
