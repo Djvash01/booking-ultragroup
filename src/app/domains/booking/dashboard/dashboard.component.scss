@@ -1,5 +1,9 @@
 @import 'colors/colors';
 
+.wrapper {
+  padding: 20px;
+}
+
 .toolbar {
   display: flex;
   align-items: center;
@@ -9,6 +13,14 @@
 .text {
   &__title {
     color: $color-label;
-    text-align: center;
+    text-align: left;
+    margin: 0;
   }
+}
+
+.actions {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+
 }
