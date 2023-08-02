@@ -15,7 +15,7 @@ export class LoginFormComponent {
     this.loading.set(value);
   }
 
-  public loading = signal(false);
+  public loading = signal<boolean>(false);
 
 
   @Output() loginPressed = new EventEmitter<LoginForm>();

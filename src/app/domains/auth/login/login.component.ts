@@ -35,7 +35,8 @@ export class LoginComponent {
         this.isLoading = false;
       })
     ).subscribe((auth: Authentication) => {
-      sessionStorage.setItem('token', auth.token);
+      sessionStorage.setItem('user_token', JSON.stringify(auth));
+      this.router.navigateByUrl('/admin');
     });
 
   }
