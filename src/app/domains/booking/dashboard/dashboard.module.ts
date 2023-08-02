@@ -12,6 +12,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { SharedModule } from '@shared/shared.module';
+import { MatTabsModule } from '@angular/material/tabs';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { SharedModule } from '@shared/shared.module';
     MatToolbarModule,
     MatCardModule,
     MatProgressSpinnerModule,
-    SharedModule
+    SharedModule,
+    MatTabsModule
   ]
 })
 export class DashboardModule { }

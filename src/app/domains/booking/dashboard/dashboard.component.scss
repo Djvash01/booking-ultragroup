@@ -1,0 +1,14 @@
+@import 'colors/colors';
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.text {
+  &__title {
+    color: $color-label;
+    text-align: center;
+  }
+}
