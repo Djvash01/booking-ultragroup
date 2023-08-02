@@ -20,6 +20,6 @@ export class EndpointsService {
   } as const;
 
   public readonly auth = {
-    url: `${environment.apiUrl}${this.authSegment}`,
+    login: `${environment.apiUrl}${this.authSegment}/login`,
   } as const;
 }

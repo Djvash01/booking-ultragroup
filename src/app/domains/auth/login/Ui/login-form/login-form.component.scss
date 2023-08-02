@@ -32,4 +32,11 @@
     flex-direction: column;
     width: 100%;
   }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
 }

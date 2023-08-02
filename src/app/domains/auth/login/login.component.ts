@@ -1,27 +1,42 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, NonNullableFormBuilder, Validators } from '@angular/forms';
+import {
+  FormControl,
+  FormGroup,
+  NonNullableFormBuilder,
+  Validators,
+} from '@angular/forms';
 import { LoginForm } from '../data/models/login_form.model';
+import { LoginService } from '../data/repository/login.service';
+import { finalize } from 'rxjs';
+import { Authentication } from '../data/models/authentication.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
+  public isLoading = false;
+  public form?: LoginForm;
 
-  public hide = true;
-  public form: LoginForm;
+  constructor(
+    private readonly loginService: LoginService,
+    private readonly router: Router
+  ) {}
 
-  constructor(private readonly formBuilder: NonNullableFormBuilder){
-    this.form = this.formBuilder.group({
-      email: this.formBuilder.control('', [Validators.required, Validators.email]),
-      password: this.formBuilder.control('', Validators.required)
+  public login(form: LoginForm): void {
+    if (form.invalid) return;
+    this.form = form;
+    this.isLoading = true;
+
+    this.loginService.login(this.form.getRawValue()).pipe(
+      finalize(() => {
+        this.isLoading = false;
+      })
+    ).subscribe((auth: Authentication) => {
+      sessionStorage.setItem('token', auth.token);
     });
+
   }
-
-  public ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
-
-
 }

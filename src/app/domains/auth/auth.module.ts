@@ -12,6 +12,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { LoginFormComponent } from './login/Ui/login-form/login-form.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+
 
 
 
@@ -31,7 +33,8 @@ import { LoginFormComponent } from './login/Ui/login-form/login-form.component';
     MatIconModule,
     MatButtonModule,
     MatToolbarModule,
-    MatCardModule
+    MatCardModule,
+    MatProgressSpinnerModule,
   ]
 })
 export class AuthModule { }

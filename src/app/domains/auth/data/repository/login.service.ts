@@ -17,7 +17,7 @@ export class LoginService implements LoginRepository {
 
   public login(credentials: Credentials): Observable<Authentication> {
     return this.request.post<Authentication>(
-      this.endpoints.auth.url,
+      this.endpoints.auth.login,
       credentials
     );
   }
