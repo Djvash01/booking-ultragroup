@@ -7,6 +7,7 @@ import { environment } from '@env/environment';
 export class EndpointsService {
   private readonly hotelSegment = '/hotels';
   private readonly roomsSegment = '/rooms';
+  private readonly authSegment = '/auth';
 
   public readonly hotels = {
     url: `${environment.apiUrl}${this.hotelSegment}`,
@@ -16,5 +17,9 @@ export class EndpointsService {
   public readonly rooms = {
     url: `${environment.apiUrl}${this.roomsSegment}`,
     byIdUrl: (id: string) => `${environment.apiUrl}${this.roomsSegment}/${id}`,
+  } as const;
+
+  public readonly auth = {
+    url: `${environment.apiUrl}${this.authSegment}`,
   } as const;
 }
