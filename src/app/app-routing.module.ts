@@ -11,6 +11,7 @@ const routes: Routes = [
     loadChildren: () => import('./domains/auth/auth.module').then((m) => m.AuthModule),
   },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'dashboard', loadChildren: () => import('./domains/booking/dashboard/dashboard.module').then(m => m.DashboardModule) },
 ];
 
 @NgModule({

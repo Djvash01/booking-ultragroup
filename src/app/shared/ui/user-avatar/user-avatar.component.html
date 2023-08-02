@@ -1,0 +1,20 @@
+<button mat-button [matMenuTriggerFor]="menu">
+  <div class="user-avatar">
+    <span>{{ userInfo().name }}</span>
+    <mat-icon>person</mat-icon>
+  </div>
+</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item disabled>
+    <mat-icon>settings</mat-icon>
+    <span>Settings</span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon>notifications_off</mat-icon>
+    <span>Disable alerts</span>
+  </button>
+  <button mat-menu-item (click)="logout()">
+    <mat-icon>logout</mat-icon>
+    <span>Logout</span>
+  </button>
+</mat-menu>

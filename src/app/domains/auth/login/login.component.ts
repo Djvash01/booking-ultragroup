@@ -36,7 +36,7 @@ export class LoginComponent {
       })
     ).subscribe((auth: Authentication) => {
       sessionStorage.setItem('user_token', JSON.stringify(auth));
-      this.router.navigateByUrl('/admin');
+      this.router.navigateByUrl('/dashboard');
     });
 
   }
