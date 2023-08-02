@@ -1,0 +1,31 @@
+<mat-card>
+  <section class="login">
+    <h1 class="login__header">
+      <mat-icon class="login__header--icon">travel_explore_outline</mat-icon>
+      Ultra Group Booking
+    </h1>
+    <form [formGroup]="form" class="login__form">
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input
+          matInput
+          formControlName="password"
+          [type]="hide ? 'password' : 'text'"
+        />
+        <button mat-icon-button matSuffix (click)="hide = !hide">
+          <mat-icon [color]="'primary'">{{
+            hide ? "visibility_off" : "visibility"
+          }}</mat-icon>
+        </button>
+      </mat-form-field>
+      <button mat-fab extended color="primary">
+        <mat-icon>login</mat-icon>
+        Go
+      </button>
+    </form>
+  </section>
+</mat-card>

@@ -7,7 +7,7 @@ const routes: Routes = [
     loadChildren: () => import('./domains/booking/home/home.module').then((m) => m.HomeModule),
   },
   {
-    path: 'login',
+    path: 'auth',
     loadChildren: () => import('./domains/auth/auth.module').then((m) => m.AuthModule),
   },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
