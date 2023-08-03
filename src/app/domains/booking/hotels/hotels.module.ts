@@ -14,6 +14,7 @@ import {MatDividerModule} from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { HotelDetailsComponent } from './ui/hotel-details/hotel-details.component';
+import { HotelEditComponent } from './ui/hotel-edit/hotel-edit.component';
 
 
 
@@ -23,7 +24,8 @@ import { HotelDetailsComponent } from './ui/hotel-details/hotel-details.componen
     HotelsComponent,
     HotelFormComponent,
     HotelListComponent,
-    HotelDetailsComponent
+    HotelDetailsComponent,
+    HotelEditComponent
   ],
   imports: [
     CommonModule,
