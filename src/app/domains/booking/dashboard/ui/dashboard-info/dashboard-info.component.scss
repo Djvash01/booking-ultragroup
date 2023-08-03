@@ -6,6 +6,10 @@
   display: flex;
   justify-content: space-between;
 
+  &__icon {
+    color: $color-white;
+  }
+
 }
 
 .text {
