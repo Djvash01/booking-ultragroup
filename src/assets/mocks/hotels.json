@@ -1,0 +1,62 @@
+[
+  {
+    "id":"1",
+    "name": "Selina",
+    "city": "medellin",
+    "imgUrl": "https://picsum.photos/200",
+    "disabled": false,
+    "location": "Centro",
+    "rooms": [
+      {
+        "id": "1",
+        "type": "Big",
+        "location": "second tower",
+        "cost": 100,
+        "tax": 12,
+        "disabled": false
+      },
+      {
+        "id": "2",
+        "type": "Medium",
+        "location": "secondtower",
+        "cost": 50,
+        "tax": 15,
+        "disabled": false
+      },
+      {
+        "id": "3",
+        "type": "Single",
+        "location": "outside",
+        "cost": 25,
+        "tax": 5,
+        "disabled": false
+      }
+    ]
+  },
+  {
+    "id":"2",
+    "name": "Carton",
+    "city": "cartagena",
+    "imgUrl": "https://picsum.photos/200",
+    "disabled": false,
+    "location": "bocagrande",
+    "rooms": [
+      {
+        "id": "1",
+        "type": "big",
+        "location": "first",
+        "cost": 1000,
+        "tax": 50,
+        "disabled": false
+      },
+      {
+        "id": "2",
+        "type": "medium",
+        "location": "second",
+        "cost": 23,
+        "tax": 123,
+        "disabled": false
+      }
+    ]
+  }
+]

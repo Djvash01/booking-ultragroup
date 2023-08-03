@@ -1,11 +1,12 @@
-import { Component, EventEmitter, Input, OnInit, Output, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output, signal } from '@angular/core';
 import { Hotel, HotelForm, RoomForm } from '../../data/models';
 import { FormArray, NonNullableFormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-hotel-form',
   templateUrl: './hotel-form.component.html',
-  styleUrls: ['./hotel-form.component.scss']
+  styleUrls: ['./hotel-form.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HotelFormComponent implements OnInit {
 
