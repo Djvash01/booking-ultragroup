@@ -1,0 +1,36 @@
+<form class="hotel-form" [formGroup]="form" *ngIf="form">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title class="hotel-form__title">
+        Rooms
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="hotel-form__general">
+        <mat-form-field appearance="outline">
+          <mat-label>Room number</mat-label>
+          <input matInput formControlName="id" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Room type</mat-label>
+          <input matInput formControlName="type" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Room location</mat-label>
+          <input matInput formControlName="location" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Room cost</mat-label>
+          <input matInput formControlName="cost" type="number" min="0"/>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Room tax</mat-label>
+          <input matInput formControlName="tax" type="number" min="0"/>
+        </mat-form-field>
+        <mat-slide-toggle [color]="'primary'" formControlName="disabled">Disabled</mat-slide-toggle>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  <button mat-fab extended color="primary" (click)="update()" [disabled]="form.invalid || loading()">Save</button>
+</form>
+

@@ -1,0 +1,32 @@
+@import 'mixins/mixins';
+@import 'colors/colors';
+
+.hotel-form {
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  
+  &__title {
+    color: $color-white;
+  }
+  
+  &__general {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-content: center;
+    align-items: baseline;
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+    @include desktop {
+      gap: 20px;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
