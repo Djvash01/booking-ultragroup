@@ -1,0 +1,40 @@
+<section class="hotel" *ngIf="hotel$ | async as hotel">
+  <mat-card class="hotel__general">
+    <mat-card-header>
+      <mat-card-title-group>
+        <mat-card-title class="text__title">{{ hotel.name }}</mat-card-title>
+        <mat-card-subtitle>{{ hotel.city | titlecase }} {{ hotel.location | titlecase }}</mat-card-subtitle>
+        <img mat-card-sm-image [src]="hotel.imgUrl"  alt="Image of hotel">
+      </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-content class="text__title">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error fugit consectetur corrupti similique esse ea eaque voluptatem eveniet, nisi corporis doloremque velit magni provident earum minima nam? Modi, nobis similique.
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <button mat-button [routerLink]="['../../edit', hotel.id ]">Edit</button>
+      <button mat-button color="warn">Disable</button>
+    </mat-card-actions>
+  </mat-card>
+  <h1 class="text__header">Rooms</h1>
+
+  <div class="hotel__rooms" >
+    <ng-container *ngFor="let room of hotel.rooms; trackBy:trackByRoom; let index =index">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title class="text__title">Number {{ room.id }}</mat-card-title>
+          <mat-card-subtitle>Location: {{ room.location }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="room__info">
+            <span><strong>Cost:</strong> {{ room.cost }}</span>
+            <span><strong>Tax:</strong> {{ room.tax }}</span>
+            <span><strong>Type:</strong> {{ room.type }}</span>
+          </div>
+        </mat-card-content>
+        <mat-card-actions align="end">
+          <button mat-button [routerLink]="['./rooms', room.id ]">Edit</button>
+        </mat-card-actions>
+      </mat-card>
+    </ng-container>
+  </div>
+</section>

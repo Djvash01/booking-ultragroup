@@ -13,6 +13,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import {MatDividerModule} from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { HotelDetailsComponent } from './ui/hotel-details/hotel-details.component';
 
 
 
@@ -21,7 +22,8 @@ import { MatIconModule } from '@angular/material/icon';
   declarations: [
     HotelsComponent,
     HotelFormComponent,
-    HotelListComponent
+    HotelListComponent,
+    HotelDetailsComponent
   ],
   imports: [
     CommonModule,

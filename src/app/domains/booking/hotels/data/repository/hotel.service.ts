@@ -15,6 +15,10 @@ export class HotelService implements HotelRepository{
     private readonly endpoints: EndpointsService
   ) {}
 
+  public getHotel(id: string): Observable<Hotel> {
+    return this.request.get<Hotel>(this.endpoints.hotels.byIdUrl(id));
+  }
+
   public save(hotel: Hotel): Observable<Hotel> {
     return this.request.post<Hotel>(this.endpoints.hotels.url, hotel);
   }
