@@ -1,0 +1,77 @@
+<form class="hotel-form" [formGroup]="form">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title class="hotel-form__title">
+        General Information
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="hotel-form__general">
+        <mat-form-field appearance="outline">
+          <mat-label>Hotel name</mat-label>
+          <input matInput formControlName="name" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>City</mat-label>
+          <input matInput formControlName="city" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Location</mat-label>
+          <input matInput formControlName="location" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Image url</mat-label>
+          <input matInput formControlName="imgUrl" />
+        </mat-form-field>
+        <mat-slide-toggle [color]="'primary'" formControlName="disabled">Disabled</mat-slide-toggle>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title class="hotel-form__title">
+        Rooms
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div formArrayName="rooms">
+        <ng-container *ngFor="let room of roomsControl.controls; let i=index">
+          <div class="hotel-form__general" [formGroup]="room">
+            <mat-form-field appearance="outline">
+              <mat-label>Room number</mat-label>
+              <input matInput formControlName="id" />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>Room type</mat-label>
+              <input matInput formControlName="type" />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>Room location</mat-label>
+              <input matInput formControlName="location" />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>Room cost</mat-label>
+              <input matInput formControlName="cost" type="number" min="0"/>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>Room tax</mat-label>
+              <input matInput formControlName="tax" type="number" min="0"/>
+            </mat-form-field>
+            <div class="hotel-form__actions">
+              <mat-slide-toggle [color]="'primary'" formControlName="disabled">Disabled</mat-slide-toggle>
+              <button mat-mini-fab color="warn" (click)="removeRoom(i)" [disabled]="loading()">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </div>
+          </div>
+          <mat-divider></mat-divider>
+        </ng-container>
+      </div>
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <button mat-raised-button color="accent" (click)="addRoom()" [disabled]="loading()">Add Room</button>
+    </mat-card-actions>
+  </mat-card>
+  <button mat-fab extended color="primary" (click)="save()" [disabled]="form.invalid || loading()">Save</button>
+</form>

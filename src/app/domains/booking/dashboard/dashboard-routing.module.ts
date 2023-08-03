@@ -12,6 +12,7 @@ const routes: Routes = [
         path: '',
         component: DashboardInfoComponent,
       },
+      { path: 'hotels', loadChildren: () => import('../hotels/hotels.module').then(m => m.HotelsModule) },
     ],
   },
 ];

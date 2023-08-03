@@ -1,16 +1,21 @@
 @import 'colors/colors';
-
-.text {
-  &__title {
-    color: $color-label;
-    text-align: left;
-    margin: 0;
-  }
-}
+@import 'mixins/mixins';
 
 .actions {
   margin: 20px 0;
   display: flex;
   justify-content: space-between;
 
+}
+
+.text {
+  &__title {
+    display: none;
+    color: $color-label;
+    text-align: left;
+    margin: 0;
+    @include desktop {
+      display: block;
+    }
+  }
 }
