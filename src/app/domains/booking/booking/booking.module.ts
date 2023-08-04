@@ -11,13 +11,16 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { HotelInformationComponent } from './ui/hotel-information/hotel-information.component';
 import { GuestsComponent } from './guest/guests.component';
+import { GuestFormComponent } from './ui/guest-form/guest-form.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     BookingComponent,
     HotelInformationComponent,
-    GuestsComponent
+    GuestsComponent,
+    GuestFormComponent
   ],
   imports: [
     CommonModule,
@@ -27,7 +30,9 @@ import { GuestsComponent } from './guest/guests.component';
     MatCardModule,
     MatToolbarModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class BookingModule { }
