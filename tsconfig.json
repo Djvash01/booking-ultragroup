@@ -26,6 +26,7 @@
     "paths": {
       "@env/*":["src/environments/*"],
       "@enums/*":["src/app/core/enums/*"],
+      "@guards/*":["src/app/core/guards/*"],
       "@services/*":["src/app/core/services/*"],
       "@models/*":["src/app/core/models/*"],
       "@domains/*":["src/app/domains/*"],

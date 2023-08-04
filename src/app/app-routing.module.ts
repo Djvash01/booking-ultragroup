@@ -1,17 +1,29 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from '@domains/booking/home/home.component';
+import { authGuard } from '@guards/auth.guard';
 
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./domains/booking/home/home.module').then((m) => m.HomeModule),
+    loadChildren: () =>
+      import('./domains/booking/home/home.module').then((m) => m.HomeModule),
   },
   {
     path: 'auth',
-    loadChildren: () => import('./domains/auth/auth.module').then((m) => m.AuthModule),
+    loadChildren: () =>
+      import('./domains/auth/auth.module').then((m) => m.AuthModule),
+  },
+  {
+    path: 'dashboard',
+    canActivate: [authGuard],
+    loadChildren: () =>
+      import('./domains/booking/dashboard/dashboard.module').then(
+        (m) => m.DashboardModule
+      ),
   },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'dashboard', loadChildren: () => import('./domains/booking/dashboard/dashboard.module').then(m => m.DashboardModule) },
+  { path: '**', component: HomeComponent },
 ];
 
 @NgModule({
