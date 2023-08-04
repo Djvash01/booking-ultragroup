@@ -16,12 +16,15 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { DashboardInfoComponent } from './ui/dashboard-info/dashboard-info.component';
 import { HotelListComponent } from '../hotels/ui/hotel-list/hotel-list.component';
 import { HotelsModule } from '../hotels/hotels.module';
+import { BookingModule } from '../booking/booking.module';
+import { BookingDetailsComponent } from './ui/booking-details/booking-details.component';
 
 
 @NgModule({
   declarations: [
     DashboardComponent,
     DashboardInfoComponent,
+    BookingDetailsComponent,
   ],
   imports: [
     CommonModule,
@@ -37,7 +40,8 @@ import { HotelsModule } from '../hotels/hotels.module';
     MatProgressSpinnerModule,
     SharedModule,
     MatTabsModule,
-    HotelsModule
+    HotelsModule,
+    BookingModule
   ]
 })
 export class DashboardModule { }

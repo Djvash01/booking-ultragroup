@@ -22,7 +22,13 @@ const routes: Routes = [
         (m) => m.DashboardModule
       ),
   },
-  { path: 'booking/:hotelId', loadChildren: () => import('./domains/booking/booking/booking.module').then(m => m.BookingModule) },
+  {
+    path: 'booking/:hotelId',
+    loadChildren: () =>
+      import('./domains/booking/booking/booking.module').then(
+        (m) => m.BookingModule
+      ),
+  },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: HomeComponent },
 ];

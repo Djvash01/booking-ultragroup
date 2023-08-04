@@ -12,5 +12,7 @@
   <mat-tab label="Hotels" *ngIf="(hotels$ | async) as hotels">
     <app-hotel-list [hotels]="hotels"></app-hotel-list>
   </mat-tab>
-  <mat-tab label="Bookings">Content 2</mat-tab>
+  <mat-tab label="Bookings" *ngIf="(bookings$ | async) as bookings">
+    <app-booking-list [bookings]="bookings"></app-booking-list>
+  </mat-tab>
 </mat-tab-group>

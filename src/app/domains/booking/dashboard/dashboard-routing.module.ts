@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard.component';
 import { DashboardInfoComponent } from './ui/dashboard-info/dashboard-info.component';
+import { BookingDetailsComponent } from './ui/booking-details/booking-details.component';
 
 const routes: Routes = [
   {
@@ -13,6 +14,7 @@ const routes: Routes = [
         component: DashboardInfoComponent,
       },
       { path: 'hotels', loadChildren: () => import('../hotels/hotels.module').then(m => m.HotelsModule) },
+      { path: 'booking/:bookingId', component: BookingDetailsComponent },
     ],
   },
 ];

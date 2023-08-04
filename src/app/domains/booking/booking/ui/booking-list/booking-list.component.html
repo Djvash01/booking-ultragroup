@@ -1,0 +1,16 @@
+<section class="list" *ngIf="bookings.length">
+  <mat-card *ngFor="let booking of bookings; trackBy:bookingTrackBy">
+    <mat-card-header>
+      <mat-card-title>Credential {{booking.id}}</mat-card-title>
+      <mat-card-subtitle>start date: {{booking.checkIn}} - end date: {{booking.checkOut}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <div>
+        <span><strong>Room: </strong>{{booking.roomId}}</span>
+      </div>
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <button mat-button color="accent">Details</button>
+    </mat-card-actions>
+  </mat-card>
+</section>

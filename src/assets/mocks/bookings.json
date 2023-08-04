@@ -1,0 +1,263 @@
+[
+  {
+    "id": "1",
+    "hotelId": "id",
+    "roomId": "1",
+    "checkIn": "2023/12/15",
+    "checkOut": "2024/01/5",
+    "emergencyContact": { "fullName": "Alejandro", "phone": "3056869732" },
+    "guests": [
+      {
+        "birthDay": "2023-08-04T20:41:37.820Z",
+        "document": "45984525",
+        "documentType": "passport",
+        "email": "marcelopeza@gmail.com",
+        "gender": "female",
+        "name": "Marcela",
+        "lastName": "Lopez",
+        "phone": "3149872403"
+      },
+      {
+        "birthDay": "2023-08-04T20:41:37.822Z",
+        "document": "2164654",
+        "documentType": "passport",
+        "email": "juancho02@gmail.com",
+        "gender": "other",
+        "name": "Juan",
+        "lastName": "Urrutia",
+        "phone": "6465465465"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "hotelId": "id",
+    "roomId": "2",
+    "checkIn": "2023/11/26",
+    "checkOut": "2023/12/5",
+    "emergencyContact": {
+      "fullName": "Mildonio",
+      "phone": "32165465"
+    },
+    "guests": [
+      {
+        "birthDay": "2023-08-04T20:41:37.820Z",
+        "document": "65465465",
+        "documentType": "dni",
+        "email": "david@gjfj.com",
+        "gender": "female",
+        "name": "David",
+        "lastName": "perez",
+        "phone": "3216546"
+      },
+      {
+        "birthDay": "2023-08-04T20:41:37.822Z",
+        "document": "2164654",
+        "documentType": "passport",
+        "email": "silvia@asd.com",
+        "gender": "other",
+        "name": "silvia",
+        "lastName": "Guardo",
+        "phone": "6465465465"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "hotelId": "id",
+    "roomId": "2",
+    "checkIn": null,
+    "checkOut": null,
+    "emergencyContact": {
+      "fullName": "Mildonio",
+      "phone": "32165465"
+    },
+    "guests": [
+      {
+        "birthDay": "2023-08-04T20:41:37.820Z",
+        "document": "65465465",
+        "documentType": "dni",
+        "email": "david@gjfj.com",
+        "gender": "female",
+        "name": "David",
+        "lastName": "perez",
+        "phone": "3216546"
+      },
+      {
+        "birthDay": "2023-08-04T20:41:37.822Z",
+        "document": "2164654",
+        "documentType": "passport",
+        "email": "silvia@asd.com",
+        "gender": "other",
+        "name": "Silvia",
+        "lastName": "Zabala",
+        "phone": "6465465465"
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "hotelId": "id",
+    "roomId": "2",
+    "checkIn": "2023/11/06",
+    "checkOut": "2023/11/20",
+    "emergencyContact": {
+      "fullName": "Dora",
+      "phone": "4598715678"
+    },
+    "guests": [
+      {
+        "birthDay": "2023-08-04T20:41:37.820Z",
+        "document": "2298713",
+        "documentType": "dni",
+        "email": "margaretp@gmail.com",
+        "gender": "female",
+        "name": "Margaret",
+        "lastName": "Torres",
+        "phone": "3159847102"
+      },
+      {
+        "birthDay": "2023-08-04T20:41:37.822Z",
+        "document": "2546787",
+        "documentType": "passport",
+        "email": "daniel@gmail.com",
+        "gender": "other",
+        "name": "Daniel",
+        "lastName": "Morrison",
+        "phone": "314596870"
+      },
+      {
+        "id": "5",
+        "hotelId": "id",
+        "roomId": "1",
+        "checkIn": "2023/11/07",
+        "checkOut": "2023/11/25",
+        "emergencyContact": {
+          "fullName": "Cristhoper",
+          "phone": "3210689752"
+        },
+        "guests": [
+          {
+            "birthDay": "2023-08-04T20:41:37.820Z",
+            "document": "1103589823",
+            "documentType": "dni",
+            "email": "flynjv@gmail.com",
+            "gender": "male",
+            "name": "Flyn",
+            "lastName": "Lourecaff",
+            "phone": "318794285"
+          },
+          {
+            "birthDay": "2023-08-04T20:41:37.822Z",
+            "document": "2287415",
+            "documentType": "passport",
+            "email": "sandrap@gmail.com",
+            "gender": "female",
+            "name": "Sandra",
+            "lastName": "Patrick",
+            "phone": "314798255"
+          }
+        ]
+      },
+      {
+        "id": "6",
+        "hotelId": "id",
+        "roomId": "1",
+        "checkIn": "2023/12/26",
+        "checkOut": "2024/01/03",
+        "emergencyContact": {
+          "fullName": "Ruth",
+          "phone": "3204569871"
+        },
+        "guests": [
+          {
+            "birthDay": "2023-08-04T20:41:37.820Z",
+            "document": "7945861",
+            "documentType": "passport",
+            "email": "armandov.com",
+            "gender": "male",
+            "name": "Armando",
+            "lastName": "Vedoya",
+            "phone": "3046597211"
+          },
+          {
+            "birthDay": "2023-08-04T20:41:37.822Z",
+            "document": "114698752",
+            "documentType": "passport",
+            "email": "colson@gmail.com.com",
+            "gender": "other",
+            "name": "Colson",
+            "lastName": "Norton",
+            "phone": "3016544978"
+          }
+        ]
+      },
+      {
+        "id": "7",
+        "hotelId": "id",
+        "roomId": "1",
+        "checkIn": "2024/01/06",
+        "checkOut": "2024/01/12",
+        "emergencyContact": {
+          "fullName": "Flor",
+          "phone": "3216548970"
+        },
+        "guests": [
+          {
+            "birthDay": "2023-08-04T20:41:37.820Z",
+            "document": "2248793",
+            "documentType": "dni",
+            "email": "micktl@gmail.com",
+            "gender": "male",
+            "name": "Mick",
+            "lastName": "Orlenko",
+            "phone": "321654266"
+          },
+          {
+            "birthDay": "2023-08-04T20:41:37.822Z",
+            "document": "2164654",
+            "documentType": "passport",
+            "email": "sherrybloom@gmail.com.com",
+            "gender": "female",
+            "name": "Sherry",
+            "lastName": "Monterrosa",
+            "phone": "59874036"
+          }
+        ]
+      },
+      {
+        "id": "8",
+        "hotelId": "id",
+        "roomId": "1",
+        "checkIn": "2023/09/07",
+        "checkOut": "2023/09/15",
+        "emergencyContact": {
+          "fullName": "Mauricio",
+          "phone": "32160017"
+        },
+        "guests": [
+          {
+            "birthDay": "2023-08-04T20:41:37.820Z",
+            "document": "11429785",
+            "documentType": "passport",
+            "email": "jamesk@gmail.com",
+            "gender": "male",
+            "name": "James",
+            "lastName": "King",
+            "phone": "321465978"
+          },
+          {
+            "birthDay": "2023-08-04T20:41:37.822Z",
+            "document": "2602474",
+            "documentType": "passport",
+            "email": "nathanK.com",
+            "gender": "male",
+            "name": "Nathan",
+            "lastName": "King",
+            "phone": "3105486865"
+          }
+        ]
+      }
+    ]
+  }
+]

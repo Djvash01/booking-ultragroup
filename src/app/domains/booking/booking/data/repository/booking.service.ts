@@ -15,6 +15,16 @@ export class BookingService implements BookingRepository {
     private readonly endpoints: EndpointsService
   ) {}
 
+  public getById(id: string): Observable<Booking> {
+    return this.request.get<Booking>(this.endpoints.booking.byIdUrl('id'));
+  }
+
+  public getAll(): Observable<Booking[]> {
+    return this.request.get<Booking[]>(
+      this.endpoints.booking.url
+    );
+  }
+
   public save(booking: Partial<Booking>): Observable<Booking> {
     return this.request.post<Booking>(
       this.endpoints.booking.url,
