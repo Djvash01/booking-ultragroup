@@ -1,7 +1,20 @@
 .guests {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  
   &__actions {
     display: flex;
     gap: 20px;
     margin: 10px 0;
+  }
+
+  &__emergency {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-content: center;
+    align-items: baseline;
+    gap: 15px;
+    padding: 20px;
   }
 }

@@ -10,6 +10,7 @@ import { DocumentType } from '../data/enums/document-type.enum';
 import { Gender } from '../data/enums/gender.enum';
 import { ActivatedRoute } from '@angular/router';
 import { Booking } from '../data/models/booking.model';
+import { EmergencyContactForm } from '../data/models/emergency-contact.model';
 
 @Component({
   selector: 'app-guests',
@@ -21,6 +22,8 @@ export class GuestsComponent implements OnInit {
     guests: FormArray<FormGroup<GuestForm>>;
   }>;
 
+  public emergencyContactForm!: FormGroup<EmergencyContactForm>;
+
   public booking!: Partial<Booking>;
   private howMany = 0;
 
@@ -31,9 +34,17 @@ export class GuestsComponent implements OnInit {
 
   public ngOnInit(): void {
     this.getBookingData();
+    this.createEmergencyForm();
   }
 
-  public getBookingData(): void {
+  private createEmergencyForm(): void {
+    this.emergencyContactForm = this.fb.group<EmergencyContactForm>({
+      fullName: this.fb.control<string>('', Validators.required),
+      phone: this.fb.control<string>('', Validators.required),
+    });
+  }
+
+  private getBookingData(): void {
     this.route.queryParamMap.subscribe((queryParams) => {
       this.booking = {
         hotelId: queryParams.get('hotelId') ?? '',
@@ -46,7 +57,7 @@ export class GuestsComponent implements OnInit {
     });
   }
 
-  public createForm(): void {
+  private createForm(): void {
     this.guestsForm = this.fb.group({
       guests: this.fb.array(
         Array.from({ length: this.howMany }, () => this.createGuestForm())
@@ -54,7 +65,7 @@ export class GuestsComponent implements OnInit {
     });
   }
 
-  public createGuestForm(): FormGroup<GuestForm> {
+  private createGuestForm(): FormGroup<GuestForm> {
     return this.fb.group<GuestForm>({
       birthDay: this.fb.control<Date>(new Date(), Validators.required),
       document: this.fb.control<string>('', Validators.required),

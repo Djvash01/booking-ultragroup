@@ -1,4 +1,17 @@
 <section class="guests">
+  <h1>Emergency contact</h1>
+  <mat-card>
+    <form class="guests__emergency" [formGroup]="emergencyContactForm">
+      <mat-form-field appearance="outline">
+        <mat-label>Full Name</mat-label>
+        <input matInput formControlName="fullName" type="text" />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Phone</mat-label>
+        <input matInput formControlName="phone" type="tel" />
+      </mat-form-field>
+    </form>
+  </mat-card>
   <h1>Please type information for all guests</h1>
   <form *ngIf="guestsForm" [formGroup]="guestsForm">
     <mat-stepper #stepper orientation="vertical">
@@ -7,16 +20,25 @@
           *ngFor="
             let guestForm of guestsControl.controls;
             let index = index;
-            let first = first;
+            let first = first
           "
           [stepControl]="guestForm"
-          errorMessage="Guest {{index+1}} is missing information"
+          errorMessage="Guest {{ index + 1 }} is missing information"
         >
-        <ng-template matStepLabel>Guest {{index+1}}</ng-template>
-        <app-guest-form [guestForm]="guestForm"></app-guest-form>
+          <ng-template matStepLabel>Guest {{ index + 1 }}</ng-template>
+          <app-guest-form [guestForm]="guestForm"></app-guest-form>
           <div class="guests__actions">
-            <button mat-raised-button color="accent" matStepperPrevious *ngIf="!first">Back</button>
-            <button mat-raised-button color="primary" matStepperNext>Next</button>
+            <button
+              mat-raised-button
+              color="accent"
+              matStepperPrevious
+              *ngIf="!first"
+            >
+              Back
+            </button>
+            <button mat-raised-button color="primary" matStepperNext>
+              Next
+            </button>
           </div>
         </mat-step>
       </ng-container>
@@ -24,8 +46,17 @@
         <ng-template matStepLabel>Done</ng-template>
         <p>You are now done.</p>
         <div class="guests__actions">
-          <button mat-raised-button color="accent" matStepperPrevious>Back</button>
-          <button mat-raised-button color="primary" [disabled]="guestsForm.invalid" (click)="stepper.reset()">Save</button>
+          <button mat-raised-button color="accent" matStepperPrevious>
+            Back
+          </button>
+          <button
+            mat-raised-button
+            color="primary"
+            [disabled]="guestsForm.invalid || emergencyContactForm.invalid"
+            (click)="stepper.reset()"
+          >
+            Save
+          </button>
         </div>
       </mat-step>
     </mat-stepper>
