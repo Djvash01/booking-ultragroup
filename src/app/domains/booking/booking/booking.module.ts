@@ -13,6 +13,12 @@ import { HotelInformationComponent } from './ui/hotel-information/hotel-informat
 import { GuestsComponent } from './guest/guests.component';
 import { GuestFormComponent } from './ui/guest-form/guest-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
+import {MatStepperModule} from '@angular/material/stepper';
+
+
 
 
 @NgModule({
@@ -32,7 +38,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatIconModule,
     MatButtonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatSelectModule,
+    MatStepperModule
   ]
 })
 export class BookingModule { }

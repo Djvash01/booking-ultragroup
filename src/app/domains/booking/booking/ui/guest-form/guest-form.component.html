@@ -1,1 +1,55 @@
-<p>guest-form works!</p>
+<form class="guest-form" [formGroup]="guestForm">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title class="guest-form__title">
+        Guest Information
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="guest-form__inputs">
+        <mat-form-field appearance="outline">
+          <mat-label>Name</mat-label>
+          <input matInput formControlName="name" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Lastname</mat-label>
+          <input matInput formControlName="lastName" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Birth dat</mat-label>
+          <input matInput formControlName="birthDay" [matDatepicker]="picker">
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Gender</mat-label>
+          <mat-select formControlName="gender" name="gender">
+            <mat-option *ngFor="let gender of genders" [value]="gender">
+              {{gender | titlecase }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Document type</mat-label>
+          <mat-select formControlName="documentType" name="documentType">
+            <mat-option *ngFor="let documentType of documentTypes" [value]="documentType">
+              {{ documentType | titlecase }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Document</mat-label>
+          <input matInput formControlName="document" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput formControlName="email" type="email"/>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Phone</mat-label>
+          <input matInput formControlName="phone" type="tel"/>
+        </mat-form-field>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</form>

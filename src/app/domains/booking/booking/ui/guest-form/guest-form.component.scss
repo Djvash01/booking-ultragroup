@@ -1,0 +1,12 @@
+@import 'colors/colors';
+
+.guest-form {
+  background-color: $background-2;
+  &__inputs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-content: center;
+    align-items: baseline;
+    gap: 15px;
+  }
+}

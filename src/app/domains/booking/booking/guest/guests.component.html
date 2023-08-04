@@ -1,1 +1,33 @@
-<app-guest-form></app-guest-form>
+<section class="guests">
+  <h1>Please type information for all guests</h1>
+  <form *ngIf="guestsForm" [formGroup]="guestsForm">
+    <mat-stepper #stepper orientation="vertical">
+      <ng-container formArrayName="guests">
+        <mat-step
+          *ngFor="
+            let guestForm of guestsControl.controls;
+            let index = index;
+            let first = first;
+          "
+          [stepControl]="guestForm"
+          errorMessage="Guest {{index+1}} is missing information"
+        >
+        <ng-template matStepLabel>Guest {{index+1}}</ng-template>
+        <app-guest-form [guestForm]="guestForm"></app-guest-form>
+          <div>
+            <button mat-button matStepperPrevious *ngIf="!first">Back</button>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </mat-step>
+      </ng-container>
+      <mat-step>
+        <ng-template matStepLabel>Done</ng-template>
+        <p>You are now done.</p>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button (click)="stepper.reset()">Reset</button>
+        </div>
+      </mat-step>
+    </mat-stepper>
+  </form>
+</section>
