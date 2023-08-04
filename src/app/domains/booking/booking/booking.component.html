@@ -8,8 +8,6 @@
     <mat-icon>login</mat-icon>
   </button>
 </mat-toolbar>
-<section class="content">
-  <app-filters [isLoading]="isLoading" (searchPressed)="search($event)"></app-filters>
-  
-  <app-hotel-list *ngIf="(hotels$ | async) as hotels" [hotels]="hotels" routeToNavigate="/booking"></app-hotel-list>
+<section class="wrapper">
+  <router-outlet></router-outlet>
 </section>

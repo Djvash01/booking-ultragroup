@@ -1,3 +1,6 @@
+.wrapper {
+  padding: 30px;
+}
 .toolbar {
   display: flex;
   justify-content: space-between;
@@ -7,10 +10,4 @@
     display: flex;
     align-items: center;
   }
-}
-.content {
-  padding: 30px 10% 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
 }
