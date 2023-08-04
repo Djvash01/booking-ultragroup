@@ -11,5 +11,5 @@
 <section class="content">
   <app-filters [isLoading]="isLoading" (searchPressed)="search($event)"></app-filters>
 
-  <app-hotel-list *ngIf="(hotels$ | async) as hotels" [hotels]="hotels" routeToNavigate="/booking" [state]="filter"></app-hotel-list>
+  <app-hotel-list *ngIf="filter && (hotels$ | async) as hotels" [hotels]="hotels" routeToNavigate="/booking" [state]="filter"></app-hotel-list>
 </section>

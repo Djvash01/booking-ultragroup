@@ -1,6 +1,6 @@
 export interface Filter {
   city?: string | null;
-  howMany: number | null;
-  checkIn: Date | null;
-  checkOut: Date | null;
+  howMany: number;
+  checkIn: Date;
+  checkOut: Date;
 }
