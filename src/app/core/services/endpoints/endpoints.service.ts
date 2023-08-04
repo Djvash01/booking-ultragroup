@@ -8,6 +8,7 @@ export class EndpointsService {
   private readonly hotelSegment = '/hotels';
   private readonly roomsSegment = '/rooms';
   private readonly authSegment = '/auth';
+  private readonly bookingSegment = '/booking';
 
   public readonly hotels = {
     url: `${environment.apiUrl}${this.hotelSegment}`,
@@ -17,6 +18,11 @@ export class EndpointsService {
   public readonly rooms = {
     url: `${environment.apiUrl}${this.roomsSegment}`,
     byIdUrl: (id: string) => `${environment.apiUrl}${this.roomsSegment}/${id}`,
+  } as const;
+
+  public readonly booking = {
+    url: `${environment.apiUrl}${this.bookingSegment}`,
+    byIdUrl: (id: string) => `${environment.apiUrl}${this.bookingSegment}/${id}`,
   } as const;
 
   public readonly auth = {

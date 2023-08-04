@@ -10,12 +10,14 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { HotelInformationComponent } from './ui/hotel-information/hotel-information.component';
+import { GuestsComponent } from './guest/guests.component';
 
 
 @NgModule({
   declarations: [
     BookingComponent,
-    HotelInformationComponent
+    HotelInformationComponent,
+    GuestsComponent
   ],
   imports: [
     CommonModule,
