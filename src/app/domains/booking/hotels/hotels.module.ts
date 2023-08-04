@@ -29,6 +29,9 @@ import { RoomsEditComponent } from './ui/rooms-edit/rooms-edit.component';
     HotelEditComponent,
     RoomsEditComponent
   ],
+  exports:[
+    HotelListComponent
+  ],
   imports: [
     CommonModule,
     HotelsRoutingModule,

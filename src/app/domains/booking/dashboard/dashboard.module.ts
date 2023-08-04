@@ -14,12 +14,14 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { SharedModule } from '@shared/shared.module';
 import { MatTabsModule } from '@angular/material/tabs';
 import { DashboardInfoComponent } from './ui/dashboard-info/dashboard-info.component';
+import { HotelListComponent } from '../hotels/ui/hotel-list/hotel-list.component';
+import { HotelsModule } from '../hotels/hotels.module';
 
 
 @NgModule({
   declarations: [
     DashboardComponent,
-    DashboardInfoComponent
+    DashboardInfoComponent,
   ],
   imports: [
     CommonModule,
@@ -34,7 +36,8 @@ import { DashboardInfoComponent } from './ui/dashboard-info/dashboard-info.compo
     MatCardModule,
     MatProgressSpinnerModule,
     SharedModule,
-    MatTabsModule
+    MatTabsModule,
+    HotelsModule
   ]
 })
 export class DashboardModule { }

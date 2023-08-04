@@ -28,7 +28,7 @@ export class HotelDetailsComponent implements OnInit {
 
   private getHotel(): void {
     this.route.paramMap.subscribe((params) => {
-      const id = params.get('id') ?? 'id';
+      const id =  'id';
       this.hotel$ = this.hotelService.getHotel(id);
     });
   }

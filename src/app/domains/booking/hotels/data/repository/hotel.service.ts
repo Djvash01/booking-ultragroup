@@ -27,6 +27,10 @@ export class HotelService implements HotelRepository{
     return this.request.get<Hotel>(this.endpoints.hotels.byIdUrl(id));
   }
 
+  public getAllHotel(): Observable<Hotel[]> {
+    return this.request.get<Hotel[]>(this.endpoints.hotels.url);
+  }
+
   public getRoom(id: string): Observable<Room> {
     return this.request.get<Room>(this.endpoints.rooms.byIdUrl(id));
   }
