@@ -1,5 +1,5 @@
 <section class="hotels">
-  <mat-card class="hotels__item" *ngFor="let hotel of hotels; trackBy:hotelTrackBy" [routerLink]="[routeToNavigate, hotel.id]">
+  <mat-card class="hotels__item" *ngFor="let hotel of hotels; trackBy:hotelTrackBy" [routerLink]="[routeToNavigate, hotel.id]" [state]="state">
     <mat-card-header>
       <img mat-card-avatar [src]="hotel.imgUrl" alt="Hotel image">
       <mat-card-title class="hotels__name">{{ hotel.name | titlecase }}</mat-card-title>

@@ -11,6 +11,7 @@ export class HotelListComponent {
 
   @Input() hotels: Hotel[] = [];
   @Input() routeToNavigate: string = './hotels/details';
+  @Input() state?: Record<string, any>;
 
 
   hotelTrackBy(index: number, hotel: Hotel): string {

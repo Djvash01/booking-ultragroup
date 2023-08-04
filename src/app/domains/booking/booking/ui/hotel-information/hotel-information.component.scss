@@ -1,0 +1,35 @@
+
+@import 'colors/colors';
+
+.text {
+  &__title {
+    color: $color-label;
+  }
+
+  &__header {
+    color: $color-white;
+    font-size: 2em;
+    margin: 20px 0;
+  }
+}
+
+.room {
+  &__info {
+    display: flex;
+    color: $color-label;
+    gap: 20px;
+  }
+}
+
+.hotel {
+
+  &__rooms {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.icon {
+  color: $color-white;
+}

@@ -1,7 +1,7 @@
 import { Component,Output, Input, EventEmitter, signal, OnInit } from '@angular/core';
 import { FilterForm } from '../../data/models/filters_form.model';
 import { Hotel } from '@domains/booking/hotels/data/models';
-import { FormBuilder, FormControl, FormGroup, NonNullableFormBuilder } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, NonNullableFormBuilder, Validators } from '@angular/forms';
 import { Filter } from '../../data/models/filters.model';
 
 @Component({
@@ -31,9 +31,9 @@ export class FiltersComponent implements OnInit {
   public createForm() {
     this.filterForm = this.fb.group({
       city: new FormControl<string | null>(null),
-      howMany: new FormControl<number | null>(null),
-      checkIn: new FormControl<Date | null>(null),
-      checkOut: new FormControl<Date | null>(null),
+      howMany: new FormControl<number>(1, { nonNullable: true , validators: [Validators.required]}),
+      checkIn: new FormControl<Date>(new Date(), { nonNullable: true, validators: [Validators.required] }),
+      checkOut: new FormControl<Date>(new Date(), { nonNullable: true , validators: [Validators.required]}),
     });
   }
 
