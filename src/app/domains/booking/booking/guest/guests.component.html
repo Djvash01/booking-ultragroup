@@ -14,18 +14,18 @@
         >
         <ng-template matStepLabel>Guest {{index+1}}</ng-template>
         <app-guest-form [guestForm]="guestForm"></app-guest-form>
-          <div>
-            <button mat-button matStepperPrevious *ngIf="!first">Back</button>
-            <button mat-button matStepperNext>Next</button>
+          <div class="guests__actions">
+            <button mat-raised-button color="accent" matStepperPrevious *ngIf="!first">Back</button>
+            <button mat-raised-button color="primary" matStepperNext>Next</button>
           </div>
         </mat-step>
       </ng-container>
       <mat-step>
         <ng-template matStepLabel>Done</ng-template>
         <p>You are now done.</p>
-        <div>
-          <button mat-button matStepperPrevious>Back</button>
-          <button mat-button (click)="stepper.reset()">Reset</button>
+        <div class="guests__actions">
+          <button mat-raised-button color="accent" matStepperPrevious>Back</button>
+          <button mat-raised-button color="primary" [disabled]="guestsForm.invalid" (click)="stepper.reset()">Save</button>
         </div>
       </mat-step>
     </mat-stepper>
