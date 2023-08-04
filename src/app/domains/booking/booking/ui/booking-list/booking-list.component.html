@@ -10,7 +10,7 @@
       </div>
     </mat-card-content>
     <mat-card-actions align="end">
-      <button mat-button color="accent">Details</button>
+      <button mat-button color="accent" [routerLink]="['./booking', booking.id]">Details</button>
     </mat-card-actions>
   </mat-card>
 </section>

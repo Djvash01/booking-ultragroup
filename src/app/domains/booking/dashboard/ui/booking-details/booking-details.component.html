@@ -1,1 +1,6 @@
-<p>booking-details works!</p>
+<button mat-icon-button class="icon" routerLink="../../">
+  <mat-icon>arrow_back</mat-icon>
+</button>
+<section class="container"  *ngIf="hotel && booking">
+  <app-booking-information [hotel]="hotel" [booking]="booking" ></app-booking-information>
+</section>

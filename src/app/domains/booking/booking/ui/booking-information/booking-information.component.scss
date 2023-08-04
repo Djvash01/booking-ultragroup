@@ -1,0 +1,16 @@
+.booking {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &__guests {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__title {
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+}
