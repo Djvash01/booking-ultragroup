@@ -8,9 +8,10 @@ import {
 import { GuestForm } from '../data/models/guest.model';
 import { DocumentType } from '../data/enums/document-type.enum';
 import { Gender } from '../data/enums/gender.enum';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Booking } from '../data/models/booking.model';
 import { EmergencyContactForm } from '../data/models/emergency-contact.model';
+import { BookingService } from '../data/repository/booking.service';
 
 @Component({
   selector: 'app-guests',
@@ -29,7 +30,9 @@ export class GuestsComponent implements OnInit {
 
   constructor(
     private readonly fb: NonNullableFormBuilder,
-    private readonly route: ActivatedRoute
+    private readonly route: ActivatedRoute,
+    private readonly router: Router,
+    private readonly bookingService: BookingService
   ) {}
 
   public ngOnInit(): void {
@@ -86,5 +89,14 @@ export class GuestsComponent implements OnInit {
 
   public get guestsControl() {
     return this.guestsForm.get('guests') as FormArray<FormGroup<GuestForm>>;
+  }
+
+  public save(): void {
+    if (this.guestsForm.invalid || this.emergencyContactForm.invalid) return;
+    this.booking.emergencyContact = this.emergencyContactForm.getRawValue();
+    this.booking.guests = this.guestsForm.getRawValue().guests;
+    this.bookingService.save(this.booking).subscribe(() => {
+      this.router.navigateByUrl('/home');
+    })
   }
 }

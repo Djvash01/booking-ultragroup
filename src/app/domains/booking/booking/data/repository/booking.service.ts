@@ -15,7 +15,7 @@ export class BookingService implements BookingRepository {
     private readonly endpoints: EndpointsService
   ) {}
 
-  public save(booking: Booking): Observable<Booking> {
+  public save(booking: Partial<Booking>): Observable<Booking> {
     return this.request.post<Booking>(
       this.endpoints.booking.url,
       booking
