@@ -62,7 +62,7 @@
   {
     "id":"3",
     "name": "Hilton",
-    "city": "cartagena",
+    "city": "Barranquilla",
     "imgUrl": "https://picsum.photos/200",
     "disabled": false,
     "location": "bocagrande",
@@ -88,7 +88,7 @@
   {
     "id":"5",
     "name": "disney",
-    "city": "cartagena",
+    "city": "Miami",
     "imgUrl": "https://picsum.photos/200",
     "disabled": false,
     "location": "bocagrande",
@@ -140,7 +140,7 @@
   {
     "id":"7ASDASD",
     "name": "THE FOUR KINGDOWS",
-    "city": "cartagena",
+    "city": "Medellin",
     "imgUrl": "https://picsum.photos/200",
     "disabled": false,
     "location": "bocagrande",
@@ -166,7 +166,7 @@
   {
     "id":"ASDA7",
     "name": "THE FOUR KINGDOWS",
-    "city": "cartagena",
+    "city": "Bogota",
     "imgUrl": "https://picsum.photos/200",
     "disabled": false,
     "location": "bocagrande",
@@ -192,7 +192,7 @@
   {
     "id":"TIERRA BOMBA",
     "name": "hAIRL",
-    "city": "cartagena",
+    "city": "Bogota",
     "imgUrl": "https://picsum.photos/200",
     "disabled": false,
     "location": "bocagrande",
@@ -218,7 +218,7 @@
   {
     "id":"10",
     "name": "yAKUZA",
-    "city": "cartagena",
+    "city": "Santa marta",
     "imgUrl": "https://picsum.photos/200",
     "disabled": false,
     "location": "bocagrande",

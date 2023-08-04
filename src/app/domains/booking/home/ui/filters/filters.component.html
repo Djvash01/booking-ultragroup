@@ -1,0 +1,50 @@
+<mat-card>
+  <form class="filters" [formGroup]="filterForm">
+    <mat-form-field appearance="outline">
+      <mat-label>Where are you going?</mat-label>
+      <input matInput formControlName="city" placeholder="City" />
+      <mat-icon class="filters__icon" matSuffix>place</mat-icon>
+      <mat-hint class="filters__hint">City</mat-hint>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>How many People?</mat-label>
+      <input matInput formControlName="howMany" placeholder="People" />
+      <mat-icon class="filters__icon" matSuffix>people</mat-icon>
+      <mat-hint class="filters__hint">City</mat-hint>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Enter a date for your trip</mat-label>
+      <mat-date-range-input [rangePicker]="picker">
+        <input
+          matStartDate
+          formControlName="checkIn"
+          placeholder="Check-in date"
+        />
+        <input matEndDate formControlName="checkOut" placeholder="checkOut" />
+      </mat-date-range-input>
+      <mat-hint class="filters__hint">Check-in date - Check-out date</mat-hint>
+      <mat-datepicker-toggle
+        matIconSuffix
+        [for]="picker"
+      ></mat-datepicker-toggle>
+      <mat-date-range-picker #picker></mat-date-range-picker>
+      <mat-error
+        *ngIf="filterForm.controls.checkIn.hasError('matStartDateInvalid')"
+        >Invalid start date</mat-error
+      >
+      <mat-error
+        *ngIf="filterForm.controls.checkOut.hasError('matEndDateInvalid')"
+        >Invalid end date</mat-error
+      >
+    </mat-form-field>
+    <button
+      mat-fab extended
+      color="primary"
+      [disabled]="filterForm.invalid || loading()"
+      (click)="search()"
+    >
+      <mat-icon>search</mat-icon>
+      Search
+    </button>
+  </form>
+</mat-card>

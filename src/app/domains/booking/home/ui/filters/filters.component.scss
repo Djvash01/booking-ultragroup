@@ -1,0 +1,15 @@
+@import 'colors/colors';
+
+.filters {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-content: center;
+  align-items: baseline;
+  gap: 10px;
+
+  &__icon,
+  &__hint {
+    color: $color-white;
+  }
+}

@@ -8,3 +8,6 @@
     <mat-icon>login</mat-icon>
   </button>
 </mat-toolbar>
+<section class="content">
+  <app-filters [isLoading]="isLoading" (searchPressed)="search($event)"></app-filters>
+</section>
